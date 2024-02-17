@@ -1,0 +1,90 @@
+[
+    {
+      "name": "AnkerMake M5",
+      "powerKW": 0.25
+    },
+    {
+      "name": "AnkerMake M5C",
+      "powerKW": 0.27
+    },
+    {
+      "name": "Creality Ender 3",
+      "powerKW": 0.35
+    },
+    {
+      "name": "Prusa i3 MK3S",
+      "powerKW": 0.2
+    },
+    {
+      "name": "Anycubic Photon",
+      "powerKW": 0.05
+    },
+    {
+      "name": "Ultimaker 3",
+      "powerKW": 0.22
+    },
+    {
+      "name": "MakerBot Replicator+",
+      "powerKW": 0.32
+    },
+    {
+      "name": "Creality CR-10",
+      "powerKW": 0.36
+    },
+    {
+      "name": "LulzBot TAZ 6",
+      "powerKW": 0.5
+    },
+    {
+      "name": "FlashForge Creator Pro",
+      "powerKW": 0.3
+    },
+    {
+      "name": "Formlabs Form 3",
+      "powerKW": 0.19
+    },
+    {
+      "name": "Elegoo Mars",
+      "powerKW": 0.05
+    },
+    {
+      "name": "Dremel Digilab 3D45",
+      "powerKW": 0.28
+    },
+    {
+      "name": "Sindoh 3DWOX DP200",
+      "powerKW": 0.22
+    },
+    {
+      "name": "Monoprice Voxel",
+      "powerKW": 0.2
+    },
+    {
+      "name": "Bibo 3D Printer",
+      "powerKW": 0.3
+    },
+    {
+      "name": "Artillery Sidewinder X1",
+      "powerKW": 0.4
+    },
+    {
+      "name": "Qidi Tech X-Pro",
+      "powerKW": 0.25
+    },
+    {
+      "name": "Raise3D Pro2",
+      "powerKW": 0.5
+    },
+    {
+      "name": "XYZprinting da Vinci Mini",
+      "powerKW": 0.12
+    },
+    {
+      "name": "BambuLab X1 Carbon",
+      "powerKW": 0.2
+    },
+    {
+      "name": "BambuLab P1P",
+      "powerKW": 0.15
+    }
+]

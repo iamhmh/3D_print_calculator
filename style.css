@@ -1,0 +1,303 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EBECF0;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.cards-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #EBECF0;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+    box-sizing: border-box;
+    flex-basis: calc(50% - 40px); /* Ajustement pour la réactivité */
+    box-shadow: 4px 4px 10px #a7a7a7,
+                -4px -4px 10px #ffffff;
+    transition: all 0.3s ease;
+}
+/* Style spécifique pour form-container et guide-container */
+.form-container, .guide-container {
+    background-color: transparent; /* Pour maintenir l'effet neumorphique */
+    border-radius: 13px;
+    padding: 20px;
+    box-shadow: none; /* Suppression de l'ombre précédente */
+    box-shadow: 4px 4px 10px #a7a7a7,
+    -4px -4px 10px #ffffff;
+}
+
+/* Vous pouvez également ajouter un peu plus de style pour rendre le guide plus lisible */
+.guide-container h2 {
+    margin-bottom: 10px;
+}
+
+.guide-container p {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+}
+
+/* Style pour les nouvelles cards */
+.printer-selection-container, .material-selection-container {
+    background-color: transparent; /* Pour maintenir l'effet neumorphique */
+    border-radius: 10px; /* Bords arrondis */
+    padding: 20px; /* Espacement interne */
+    box-shadow: 4px 4px 10px #a7a7a7,
+    -4px -4px 10px #ffffff;
+}
+
+/* Style pour les sélecteurs dans les nouvelles cards */
+.printer-selection-container select, .material-selection-container select {
+    width: 100%; /* Utiliser toute la largeur disponible */
+    padding: 10px; /* Padding pour plus de confort */
+    border-radius: 5px; /* Bords arrondis pour le sélecteur */
+    border: 1px solid #ccc; /* Bordure subtile */
+    margin-top: 10px; /* Espacement au-dessus du sélecteur */
+}
+
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les éléments du formulaire */
+}
+
+form > div {
+    display: flex;
+    justify-content: space-between; /* Espacement entre les boutons */
+    gap: 10px; /* Ajoute un espace entre les boutons */
+}
+
+
+/* Adaptation du style pour les input et les labels */
+input[type="number"], button {
+    background-color: transparent;
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+    width: 100%; /* Assurez-vous que les inputs prennent toute la largeur disponible */
+    padding: 12px;
+    margin-bottom: 15px; /* Espacement entre les éléments */
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
+    transition: all 0.2s ease-in-out;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    color: #61677C;
+    text-shadow: 1px 1px 0 #FFF;
+}
+
+input[type="number"]:focus {
+    box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+}
+
+label {
+    display: block;
+    padding-left: 10px;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    color: #61677C;
+    text-shadow: 1px 1px 0 #FFF;
+    margin-bottom: 8px;
+}
+
+button {
+    flex: 1; /* Assure que tous les boutons prennent la même largeur */
+    margin-top: 10px; /* Espacement au-dessus des boutons */
+    padding: 10px 15px; /* Ajustez le padding des boutons pour un meilleur toucher */
+    font-size: 16px; /* Taille de texte uniforme */
+    text-align: center; /* Texte centré dans le bouton */
+    background-color: transparent;
+    color: #61677C;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.07em;
+    text-shadow: 1px 1px 0 #FFF;
+    padding: 8px 20px;
+    border: 0;
+    border-radius: 30px;
+    box-shadow: 3px 3px 5px #BABECC, -4px -4px 10px #FFF;
+    outline: 0;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
+}
+
+button:active {
+    box-shadow: inset 2px 2px 3px #BABECC, inset -2px -2px 3px #FFF;
+}
+
+/* Spécifique pour le bouton de chargement pour différencier l'action */
+button:nth-of-type(3) { /* Supposant que c'est le troisième bouton dans le formulaire */
+    background-color: #008CBA; /* Bleu */
+}
+
+button:nth-of-type(3):hover {
+    background-color: #007bb5;
+}
+
+
+/* Style spécifique pour le texte du résultat */
+#resultText {
+    font-size: 20px; /* Taille de la police pour le résultat */
+    color: #333; /* Couleur du texte */
+    text-align: center; /* Centrage du texte */
+    padding: 20px; /* Espacement autour du texte */
+}
+
+.result-price {
+    font-weight: bold; /* Met le texte en gras */
+}
+
+/* Style général de la modal */
+.modal {
+    display: none; /* Caché par défaut */
+    position: fixed; /* Reste en place */
+    z-index: 2; /* Au-dessus du contenu */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largeur complète */
+    height: 100%; /* Hauteur complète */
+    overflow: auto; /* Permettre le défilement si nécessaire */
+    background-color: rgba(0,0,0,0.4); /* Noir avec opacité */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% du haut et centré */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Adaptez à la largeur désirée */
+    border-radius: 10px; /* Bords arrondis pour la modal */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère pour le 3D */
+    animation: modalOpen 0.3s ease-out; /* Animation à l'ouverture */
+}
+
+/* Animation à l'ouverture de la modal */
+@keyframes modalOpen {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Ajustements pour les informations supplémentaires */
+#printerInfo, #materialInfo {
+    margin-top: 10px;
+}
+
+@media (max-width: 1024px) {
+    /* Pour les tablettes et les écrans plus petits */
+    .modal-content {
+        width: 70%; /* Modale plus petite pour les tablettes */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Adaptations pour les appareils mobiles */
+
+    body {
+        align-items: flex-start; /* Alignez au début pour éviter le tronquage en haut */
+        padding-top: 50px; /* Ajoutez plus d'espace en haut pour le titre */
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; /* Réduisez l'espacement pour les petits écrans */
+        padding: 10px; /* Réduisez le padding général */
+    }
+
+    .form-container, .guide-container {
+        width: 100%; /* Utilisez toute la largeur disponible */
+    }
+
+    form {
+        width: 100%; /* Assurez-vous que le formulaire utilise toute la largeur disponible */
+        margin: 0 auto; /* Centrer le formulaire dans le viewport */
+    }
+
+    form input, form button {
+        width: calc(100% - 24px); /* Ajustez en fonction du padding/margin spécifique */
+        margin-bottom: 15px; /* Ajoutez plus d'espace entre les éléments */
+    }
+
+    .modal-content {
+        width: 90%; /* Modale encore plus petite pour les mobiles */
+    }
+
+    .card {
+        flex-basis: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Pour les très petits appareils */
+    form input, form button, .close-button {
+        font-size: 16px; /* Réduction de la taille de la police pour économiser de l'espace */
+    }
+
+    label {
+        font-size: 18px; /* Taille de la police ajustée pour les labels */
+    }
+
+    .guide-container p {
+        font-size: 14px; /* Réduction de la taille de la police pour le guide */
+    }
+
+    .modal-content {
+        margin: 10% auto; /* Espacement réduit autour de la modale */
+        padding: 15px; /* Padding réduit */
+    }
+}

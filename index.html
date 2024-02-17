@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculateur de coût d'impression 3D</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculateur de coût d'impression 3D</h1>
+        <div class="cards-container">
+            <div class="form-container card">
+                <h2>Calculateur de coût d'impression 3D</h2>
+                <form id="costCalculator">
+                    <label for="">Poids de la pièce (en grammes)</label>
+                    <input type="number" id="weight" required>
+                    <label for="">Temps d'impression (en heures)</label>
+                    <input type="number" id="hours" required>
+                    <label for="">Coût horaire d'impression (en €)</label>
+                    <input type="number" id="hourlyRate" required>
+                    <label for="">Coût du PLA par gramme (en €)</label>
+                    <input type="number" id="plaCostPerGram" step="0.01" required>
+                    <label for="">Coût de l'électricité par kWh (en €)</label>
+                    <input type="number" id="electricityCostPerKWh" step="0.01" required>
+                    <label for="">Consommation de l'imprimante (en kW)</label>
+                    <input type="number" id="printerPowerKW" step="0.01" required>
+                    <button type="button" onclick="calculateCost()">Calculer</button>
+                    <div class="">   
+                        <button type="button" onclick="saveConfiguration()">Sauvegarder Configuration</button>
+                        <button type="button" onclick="loadConfiguration()">Charger Configuration</button>
+                    </div>
+                </form>
+            </div>
+            <div class="guide-container card">
+                <h2>Guide d'utilisation</h2>
+                <p><strong>Poids de la pièce (en grammes) :</strong> Entrez le poids total de la pièce en grammes. Cela est utilisé pour calculer le coût du matériel (PLA).</p>
+                <p><strong>Temps d'impression (en heures) :</strong> Durée totale d'impression de la pièce en heures.</p>
+                <p><strong>Coût horaire d'impression (en €) :</strong> Coût horaire incluant l'amortissement de l'imprimante, l'entretien et votre temps.</p>
+                <p><strong>Coût du PLA par gramme (en €) :</strong> Coût par gramme du filament PLA utilisé pour l'impression.</p>
+                <p><strong>Coût de l'électricité par kWh (en €) :</strong> Coût de l'énergie consommée par l'imprimante.</p>
+                <p><strong>Consommation de l'imprimante (en kW) :</strong> Puissance moyenne consommée par l'imprimante pendant l'impression.</p>
+            </div>
+            <div class="printer-selection-container card">
+                <h2>Choix de l'imprimante</h2>
+                <select id="printerModel">
+                    <!-- Les options seront chargées dynamiquement -->
+                </select>
+                <div id="printerInfo">Consommation électrique de l'imprimante : </div>
+            </div>
+            <div class="material-selection-container card">
+                <h2>Choix du filament</h2>
+                <select id="materialType">
+                    <!-- Les options seront chargées dynamiquement -->
+                </select>
+                <div id="materialInfo">Coût par gramme de filament : </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Modal pour la validation -->
+    <div id="validationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <p>Veuillez remplir tous les champs.</p>
+        </div>
+    </div>
+
+        <!-- Modal pour afficher le résultat du calcul -->
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeResultModal()">&times;</span>
+            <p id="resultText">Selon les informations saisies, l'impression de la pièce coûterait :</p>
+        </div>
+    </div>
+</body>
+</html>

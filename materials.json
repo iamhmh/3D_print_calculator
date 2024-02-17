@@ -1,0 +1,42 @@
+[
+    {
+      "type": "PLA",
+      "costPerGram": 0.02
+    },
+    {
+      "type": "ABS",
+      "costPerGram": 0.02
+    },
+    {
+      "type": "PETG",
+      "costPerGram": 0.025
+    },
+    {
+      "type": "TPU",
+      "costPerGram": 0.07
+    },
+    {
+      "type": "ASA",
+      "costPerGram": 0.03
+    },
+    {
+      "type": "Polycarbonate",
+      "costPerGram": 0.08
+    },
+    {
+      "type": "Nylon",
+      "costPerGram": 0.065
+    },
+    {
+      "type": "PVA",
+      "costPerGram": 0.1
+    },
+    {
+      "type": "HIPS",
+      "costPerGram": 0.04
+    },
+    {
+      "type": "Resin",
+      "costPerGram": 0.1
+    }
+]  
