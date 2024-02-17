@@ -9,6 +9,20 @@
     <div class="container">
         <h1>Calculateur de coût d'impression 3D</h1>
         <div class="cards-container">
+            <div class="printer-selection-container card">
+                <h2>Choix de l'imprimante</h2>
+                <select id="printerModel">
+                    <!-- Les options seront chargées dynamiquement -->
+                </select>
+                <div id="printerInfo">Consommation électrique de l'imprimante : </div>
+            </div>
+            <div class="material-selection-container card">
+                <h2>Choix du filament</h2>
+                <select id="materialType">
+                    <!-- Les options seront chargées dynamiquement -->
+                </select>
+                <div id="materialInfo">Coût par gramme de filament : </div>
+            </div>
             <div class="form-container card">
                 <h2>Calculateur de coût d'impression 3D</h2>
                 <form id="costCalculator">
@@ -39,20 +53,6 @@
                 <p><strong>Coût du PLA par gramme (en €) :</strong> Coût par gramme du filament PLA utilisé pour l'impression.</p>
                 <p><strong>Coût de l'électricité par kWh (en €) :</strong> Coût de l'énergie consommée par l'imprimante.</p>
                 <p><strong>Consommation de l'imprimante (en kW) :</strong> Puissance moyenne consommée par l'imprimante pendant l'impression.</p>
-            </div>
-            <div class="printer-selection-container card">
-                <h2>Choix de l'imprimante</h2>
-                <select id="printerModel">
-                    <!-- Les options seront chargées dynamiquement -->
-                </select>
-                <div id="printerInfo">Consommation électrique de l'imprimante : </div>
-            </div>
-            <div class="material-selection-container card">
-                <h2>Choix du filament</h2>
-                <select id="materialType">
-                    <!-- Les options seront chargées dynamiquement -->
-                </select>
-                <div id="materialInfo">Coût par gramme de filament : </div>
             </div>
         </div>
     </div>
